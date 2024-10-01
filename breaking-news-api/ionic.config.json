@@ -1,0 +1,7 @@
+{
+  "name": "Exemplo003-NewApi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

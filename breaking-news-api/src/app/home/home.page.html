@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Últimas Notícias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="fetchNews()">Carregar Notícias</ion-button>
+
+  <ion-list *ngIf="newsData">
+    <ion-item *ngFor="let article of newsData.articles">
+      <ion-label>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <a [href]="article.url" target="_blank">Leia mais</a>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-spinner *ngIf="loading"></ion-spinner>
+</ion-content>
