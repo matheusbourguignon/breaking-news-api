@@ -1,6 +1,10 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Últimas Notícias</ion-title>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start"> <!-- Slot para o botão de voltar -->
+      <ion-button (click)="goToPresentation()">
+        <ion-icon name="arrow-back" slot="start"></ion-icon> <!-- Ícone de voltar -->
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

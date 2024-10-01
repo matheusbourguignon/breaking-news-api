@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NewsService } from '../services/news.service';
+import { NavController } from '@ionic/angular'; // Importando NavController
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomePage {
   newsData: any;
   loading: boolean = false;
 
-  constructor(private newsService: NewsService) {}
+  constructor(private newsService: NewsService, private navCtrl: NavController) {} // Injeta NavController
 
   fetchNews() {
     this.loading = true;
@@ -24,5 +25,10 @@ export class HomePage {
         this.loading = false;
       }
     );
+  }
+
+  // Função para voltar à página de apresentação
+  goToPresentation() {
+    this.navCtrl.navigateBack('/presentation'); // Navega para a página de apresentação
   }
 }

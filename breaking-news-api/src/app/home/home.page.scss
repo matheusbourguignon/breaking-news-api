@@ -1,3 +1,13 @@
+/* Estilo personalizado para o ion-toolbar */
+.custom-toolbar {
+  background-color: #3880ff; /* Cor de fundo do toolbar */
+  color: white; /* Cor do texto */
+  --background: #3880ff; /* Cor de fundo com variável do Ionic */
+  --color: white; /* Cor do texto com variável do Ionic */
+  font-family: 'Arial', sans-serif; /* Define a fonte desejada */
+  padding: 10px; /* Adiciona preenchimento */
+}
+
 #container {
   text-align: center;
 
