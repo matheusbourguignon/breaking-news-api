@@ -1,6 +1,6 @@
 ## Estatísticas de Países 🌍
 
-Projeto com ionic com objetivo desenvolver uma API para gerenciar e visualizar dados estatísticos de países.
+Projeto feito com ionic com objetivo desenvolver uma API para gerenciar e visualizar dados estatísticos de países.
 
 ## Estrutura de Arquivos 📄
 
