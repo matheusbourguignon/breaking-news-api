@@ -36,6 +36,33 @@ src/
 ```
 ## Pré-requisitos 🔧
 Certifique-se de que os seguintes itens estão instalados em seu sistema:
+-Node.js
+-Ionic/cli
+
+## 1. Baixe as Dependências
+
+## Download e Instalação:
+Acesse o site oficial do Node.js https://nodejs.org/ e faça o download da versão recomendada para o seu sistema operacional.
+
+Siga as instruções de instalação.
+
+Verificação da Instalação: Após a instalação, você pode verificar se o Node.js e o npm (gerenciador de pacotes do Node.js) foram instalados corretamente executando os seguintes comandos no terminal:
+
+```bash
+node -v
+```
+
+versão mais atual:
+
+```bash
+npm install node 22.9.0
+```
+
+Ionic CLI instalável via npm com o comando:
+
+```bash
+ npm install -g @ionic/cli
+```
 
 ## 2. Criação das Páginas de Navegação
 Páginas: home, countries e details.
