@@ -6,6 +6,7 @@ Projeto com ionic com objetivo desenvolver uma API para gerenciar e visualizar d
 
 A organização do projeto é apresentada a seguir:
 
+```bash
 src/
 └── app/
     ├── home/
@@ -32,6 +33,7 @@ src/
     └── services/
         ├── country.service.spec.ts
         └── country.service.ts
+        ```
 
 ## Pré-requisitos 🔧
 
@@ -57,8 +59,8 @@ Certifique-se de que os seguintes itens estão instalados em seu sistema:
 ```bash
 3. Instale as dependências necessárias:
    npm install
-   
 ```
+
 ## Uso 🚀
 
 Para iniciar o servidor da API, execute o seguinte comando:
