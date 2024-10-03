@@ -1,6 +1,6 @@
 ## Estatísticas de Países 🌍
 
-## Este projeto tem como objetivo desenvolver uma API para gerenciar e visualizar dados estatísticos de países, incluindo índices de fome, desigualdade social e escolaridade. A API possibilita a inserção, consulta, exclusão e listagem dessas estatísticas, oferecendo uma interface acessível para análise de dados relevantes.
+Projeto com ionic com objetivo desenvolver uma API para gerenciar e visualizar dados estatísticos de países.
 
 ## Estrutura de Arquivos 📄
 
@@ -37,20 +37,28 @@ src/
 
 Certifique-se de que os seguintes itens estão instalados em seu sistema:
 
+```bash
 - Node.js
 - NPM (Node Package Manager) 
+```
 
 ## Instalação 🛠
 
+```bash
 1. Clone o repositório:
    git clone https://github.com/matheusbourguignon/invite-me-api
+```
 
+```bash
 2. Navegue até o diretório do projeto:
    cd invite-me-api
+```
 
+```bash
 3. Instale as dependências necessárias:
    npm install
-
+   
+```
 ## Uso 🚀
 
 Para iniciar o servidor da API, execute o seguinte comando:
