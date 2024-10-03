@@ -69,8 +69,12 @@ Páginas: home, countries e details.
 Comandos utilizados:
 Para criar cada uma das páginas de navegação, executei os seguintes comandos:
 
+```bash
 ionic generate page countries
+```
+```bash
 ionic generate page details
+```
 
 Esses comandos criaram três diretórios diferentes com arquivos padrões para cada página.
 
