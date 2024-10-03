@@ -64,9 +64,3 @@ A API estará disponível em http://localhost:3000.
 - Consulta de Dados: Busque estatísticas específicas por critérios definidos.
 - Exclusão de Dados: Remova estatísticas que não são mais necessárias.
 - Listagem de Dados: Exiba todas as estatísticas disponíveis em um formato organizado.
-
-## Contribuição 🤝
-
-Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir um pull request ou uma issue.
-
-## Contato 📧
