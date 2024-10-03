@@ -1,7 +1,11 @@
-Estatísticas de Países 🌍
-Este projeto tem como objetivo criar uma API para gerenciar e visualizar dados estatísticos de países, incluindo índices de fome, desigualdade social e escolaridade. A API permite a inserção, consulta, exclusão e listagem dessas estatísticas.
+## Estatísticas de Países 🌍
 
-Estrutura de Arquivos 📄
+## Este projeto tem como objetivo desenvolver uma API para gerenciar e visualizar dados estatísticos de países, incluindo índices de fome, desigualdade social e escolaridade. A API possibilita a inserção, consulta, exclusão e listagem dessas estatísticas, oferecendo uma interface acessível para análise de dados relevantes.
+
+## Estrutura de Arquivos 📄
+
+A organização do projeto é apresentada a seguir:
+
 src/
 └── app/
     ├── home/
@@ -29,6 +33,40 @@ src/
         ├── country.service.spec.ts
         └── country.service.ts
 
-Pré-requisitos 🔧
-Node.js
-NPM (Node Package Manager)
+## Pré-requisitos 🔧
+
+Certifique-se de que os seguintes itens estão instalados em seu sistema:
+
+- Node.js
+- NPM (Node Package Manager) 
+
+## Instalação 🛠
+
+1. Clone o repositório:
+   git clone https://github.com/matheusbourguignon/invite-me-api
+
+2. Navegue até o diretório do projeto:
+   cd invite-me-api
+
+3. Instale as dependências necessárias:
+   npm install
+
+## Uso 🚀
+
+Para iniciar o servidor da API, execute o seguinte comando:
+   npm start
+
+A API estará disponível em http://localhost:3000.
+
+## Funcionalidades 🌟
+
+- Inserção de Dados: Adicione novas estatísticas de países com facilidade.
+- Consulta de Dados: Busque estatísticas específicas por critérios definidos.
+- Exclusão de Dados: Remova estatísticas que não são mais necessárias.
+- Listagem de Dados: Exiba todas as estatísticas disponíveis em um formato organizado.
+
+## Contribuição 🤝
+
+Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir um pull request ou uma issue.
+
+## Contato 📧
