@@ -37,42 +37,63 @@ src/
 ## Pré-requisitos 🔧
 Certifique-se de que os seguintes itens estão instalados em seu sistema:
 
-1. **Node.js**: Para instalar o Node.js, siga os passos abaixo:
-   - Acesse o site oficial do Node.js: [https://nodejs.org](https://nodejs.org)
-   - Baixe a versão LTS recomendada para o seu sistema operacional.
-   - Siga as instruções de instalação fornecidas pelo instalador.
+## 2. Criação das Páginas de Navegação
+Páginas: home, countries e details.
+Comandos utilizados:
+Para criar cada uma das páginas de navegação, executei os seguintes comandos:
 
-2. **NPM (Node Package Manager)**: O NPM é instalado automaticamente com o Node.js. Para verificar se a instalação foi bem-sucedida, abra o terminal e digite:
-  ```bash
-   npm -v
-   
-3. **Ionic CLI**: Para instalar o Ionic CLI, execute o seguinte comando no terminal:
-npm install -g @ionic/cli
-
-## Criação do projeto
-
-```bash
-ionic start country-explorer-api blank
-```
-
-## Criando a página de países
-```bash
 ionic generate page countries
-```
-
-## Criando a página de detalhes
-```bash
 ionic generate page details
-```
 
-## Criando a página de serviço
+Esses comandos criaram três diretórios diferentes com arquivos padrões para cada página.
+
+## 3. Navegação entre Páginas
+Modificação:
+No arquivo home.page.html, adicionei os links de navegação para as páginas countries e details usando o seguinte código:
+<ion-content>
+  <ion-button expand="full" routerLink="/countries">Explorar Países</ion-button>
+  <ion-button expand="full" routerLink="/details">Detalhes</ion-button>
+</ion-content>
+
+Aqui, foram adicionados botões que utilizam o recurso routerLink para navegar entre as páginas.
+
+## 4. Configuração de Rotas
+Modificação:
+As rotas foram configuradas no arquivo app-routing.module.ts, onde adicionei as novas rotas para countries e details.
+
+```bash
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'countries',
+    loadChildren: () => import('./countries/countries.module').then(m => m.CountriesPageModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then(m => m.DetailsPageModule)
+  }
+];
+```
+## 5. Consumo de API na Página de Countries
+Criação do Serviço:
+Para consumir a API de países, criei um serviço em services/country.service.ts usando o comando:
+
 ```bash
 ionic generate service services/country
 ```
 
-## Consumindo API
+No arquivo country.service.ts, adicionei o seguinte código para realizar as chamadas à API:
 
-## Country.service.ts
+## Código Adicionado (country.service.ts):
+
 ```bash
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -95,7 +116,58 @@ export class CountryService {
   }
 }
 ```
-## Country.service.spec.ts
+Este código realiza a requisição para a API pública restcountries.com e 
+permite obter dados de todos os países ou de um país específico por nome.
+
+## 6. Exibição dos Dados da API
+Modificação:
+Na página countries.page.ts, adicionei o seguinte código para consumir e exibir os dados da API:
+
+```bash
+import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../services/country.service';
+
+@Component({
+  selector: 'app-countries',
+  templateUrl: './countries.page.html',
+  styleUrls: ['./countries.page.scss'],
+})
+export class CountriesPage implements OnInit {
+  countries: any[] = [];
+
+  constructor(private countryService: CountryService) {}
+
+  ngOnInit() {
+    this.countryService.getCountries().subscribe(data => {
+      this.countries = data;
+    });
+  }
+}
+```
+## Modificação:
+No arquivo countries.page.html, adicionei o seguinte código para exibir a lista de países:
+
+```bash
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Países</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let country of countries">
+      <ion-label>{{ country.name.common }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+```
+
+Este código exibe a lista de países utilizando a diretiva *ngFor para iterar sobre os dados retornados pela API.
+
+## 7. Testes Unitários do Serviço
+Modificação:
+No arquivo de teste country.service.spec.ts, adicionei o seguinte código para garantir que o serviço foi criado corretamente:
 
 ```bash
 import { TestBed } from '@angular/core/testing';
@@ -112,43 +184,7 @@ describe('CountryService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-})
-
+});
 ```
-
-## Instalação 🛠
-
-```bash
-1. Clone o repositório:
-   git clone https://github.com/matheusbourguignon/invite-me-api
-```
-
-```bash
-2. Navegue até o diretório do projeto:
-   cd invite-me-api
-```
-
-```bash
-3. Instale as dependências necessárias:
-   npm install
-```
-
-## Uso 🚀
-
-Para iniciar o servidor da API, execute o seguinte comando:
-npm start
-
-A API estará disponível em http://localhost:3000.
-
-## Funcionalidades 🌟
-
-- Inserção de Dados: Adicione novas estatísticas de países com facilidade.
-- Consulta de Dados: Busque estatísticas específicas por critérios definidos.
-- Exclusão de Dados: Remova estatísticas que não são mais necessárias.
-- Listagem de Dados: Exiba todas as estatísticas disponíveis em um formato organizado.
-
-## Print das telas do projeto
-![Tela de apresentação](<tela de apresentação.jpg>)
-![tela dos países](<tela dos países.jpg>)
-![tela da descrição do país](<tela da descrição do país.jpg>)
--home 
+## Conclusão
+Este projeto foi desenvolvido em Ionic e implementa navegação entre páginas, consumo de API e exibição de dados de países.
