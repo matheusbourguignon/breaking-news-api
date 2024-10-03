@@ -188,3 +188,8 @@ describe('CountryService', () => {
 ```
 ## Conclusão
 Este projeto foi desenvolvido em Ionic e implementa navegação entre páginas, consumo de API e exibição de dados de países.
+
+## Telas do projeto
+![Tela de apresentação](<tela de apresentação.jpg>)
+![tela da descrição do país](<tela da descrição do país.jpg>)
+![Tela de todos os países](<tela dos países.jpg>)
