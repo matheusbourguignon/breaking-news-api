@@ -1,0 +1,7 @@
+{
+  "name": "country-explorer-api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
