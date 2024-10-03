@@ -1,2 +1,2 @@
-# breaking-news-api
-Usando API de notícias
+# country-explorer-api
+Usando API de busca de paises
