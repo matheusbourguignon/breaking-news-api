@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ country?.name.common }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>{{ country?.name.common }}</h2>
+  <p><strong>Capital:</strong> {{ country?.capital?.[0] || 'N/A' }}</p>
+  <p><strong>População:</strong> {{ country?.population }}</p>
+  <p><strong>Região:</strong> {{ country?.region }}</p>
+</ion-content>
