@@ -33,16 +33,14 @@ src/
     └── services/
         ├── country.service.spec.ts
         └── country.service.ts
-        ```
-
+```
 ## Pré-requisitos 🔧
 
 Certifique-se de que os seguintes itens estão instalados em seu sistema:
 
-```bash
+
 - Node.js
 - NPM (Node Package Manager) 
-```
 
 ## Instalação 🛠
 
