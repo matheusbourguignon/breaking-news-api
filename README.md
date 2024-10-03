@@ -36,9 +36,18 @@ src/
 ```
 ## Pré-requisitos 🔧
 Certifique-se de que os seguintes itens estão instalados em seu sistema:
-- Node.js
-- NPM (Node Package Manager) 
-- Ionic Cli
+
+1. **Node.js**: Para instalar o Node.js, siga os passos abaixo:
+   - Acesse o site oficial do Node.js: [https://nodejs.org](https://nodejs.org)
+   - Baixe a versão LTS recomendada para o seu sistema operacional.
+   - Siga as instruções de instalação fornecidas pelo instalador.
+
+2. **NPM (Node Package Manager)**: O NPM é instalado automaticamente com o Node.js. Para verificar se a instalação foi bem-sucedida, abra o terminal e digite:
+  ```bash
+   npm -v
+   
+3. **Ionic CLI**: Para instalar o Ionic CLI, execute o seguinte comando no terminal:
+npm install -g @ionic/cli
 
 ## Criação do projeto
 
